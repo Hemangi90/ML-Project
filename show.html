@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Display Results</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2c3e50;
+            font-weight: 700;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #e74c3c;
+            font-weight: 600;
+            font-size: 1.8em;
+            margin-top: 1em;
+            margin-bottom: 0.5em;
+        }
+
+        h3 {
+            color: #34495e;
+            font-weight: 400;
+            font-size: 1.2em;
+            margin: 0.5em 0;
+        }
+
+        .prediction {
+            background: #ecf0f1;
+            padding: 1em;
+            border-radius: 5px;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Diabetes Prediction</h1>
+    <h3>Pregnancy Value : {{ preg }}</h3>
+    <h3>Blood Pressure Value : {{ bp }}</h3>
+    <h3>Glucose Levels : {{ gluc }}</h3>
+    <h3>Skin Thickness : {{ st }}</h3>
+    <h3>Insulin Levels : {{ ins }}</h3>
+    <h3>BMI : {{ bmi }}</h3>
+    <h3>Diabetes Pedigree Function : {{ dbf }}</h3>
+    <h3>Age : {{ age }}</h3>
+
+    <div class="prediction">
+        <h2>Diabetes Prediction : {{ res }}</h2>
+    </div>
+</div>
+</body>
+</html>
